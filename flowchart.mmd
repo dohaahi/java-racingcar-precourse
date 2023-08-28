@@ -1,0 +1,24 @@
+flowchart TB
+    A --> B --> C
+    subgraph A[A. 입력 및 데이터 변환]
+        direction LR
+        A1[자동차 이름 읽기]
+        A2[Car로 변환 하기]
+        A3[게임 실행]
+        A1 --> A2 --> A3
+    end
+
+    subgraph B[B. 게임 실행 및 데이터 가공]
+        direction LR
+        B1[모든 Car 이동 시키기]
+        B2[이동 시킨 데이터 가공]
+        B3[Controller에 리턴]
+        B1 --> B2 --> B3
+    end
+
+    subgraph C[C. 결과 출력]
+        direction LR
+        C1[라운드 별 데이터 출력]
+        C2[우승자 출력]
+        C1 --> C2
+    end
